@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Card } from './components/Card'
+import { Footer } from './components/Footer'
+import { Header } from './components/Header'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <>
+    <Header />
+    <div>
+      <Card 
+        id={1}
+        paragraph='TypeScript'
+        details='TS para Frontend e Backend'
+        />
+      <Card 
+        id={2}
+        paragraph='HTML'
+        details='HTML para Frontend e Backend'
+        />
+      <Card 
+        id={3}
+        paragraph='SQL'
+        details='SQL para banco de dados'
+        />
     </div>
+    <Footer />
+  </>
   );
 }
 
